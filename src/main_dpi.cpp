@@ -1,3 +1,4 @@
+#include "platform.h"   // <-- UTF-8 fix for Windows console
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -73,6 +74,7 @@ std::vector<std::string> split(const std::string& s) {
 }
 
 int main(int argc, char* argv[]) {
+    enableUTF8Console();  // <-- fixes garbled box-drawing chars on Windows
     if (argc < 3) {
         printUsage(argv[0]);
         return 1;
