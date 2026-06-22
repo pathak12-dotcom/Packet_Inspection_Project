@@ -1,4 +1,5 @@
 // Working DPI Engine - Simplified but functional
+#include "platform.h"   // <-- UTF-8 fix for Windows console
 #include <iostream>
 #include <fstream>
 #include <unordered_map>
@@ -76,6 +77,7 @@ private:
 };
 
 void printUsage(const char* prog) {
+    enableUTF8Console();  // <-- fixes garbled box-drawing chars on Windows
     std::cout << R"(
 DPI Engine - Deep Packet Inspection System
 ==========================================
