@@ -1,4 +1,5 @@
 // Simple single-threaded test version
+#include "platform.h"   // <-- UTF-8 fix for Windows console
 #include <iostream>
 #include "pcap_reader.h"
 #include "packet_parser.h"
@@ -9,6 +10,7 @@ using namespace PacketAnalyzer;
 using namespace DPI;
 
 int main(int argc, char* argv[]) {
+    enableUTF8Console();  // <-- fixes garbled box-drawing chars on Windows
     if (argc < 2) {
         std::cerr << "Usage: " << argv[0] << " <pcap_file>\n";
         return 1;
