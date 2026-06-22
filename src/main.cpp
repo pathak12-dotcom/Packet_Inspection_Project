@@ -1,3 +1,4 @@
+#include "platform.h"   // <-- UTF-8 fix for Windows console
 #include <iostream>
 #include <iomanip>
 #include <ctime>
@@ -87,6 +88,7 @@ void printUsage(const char* program_name) {
 }
 
 int main(int argc, char* argv[]) {
+    enableUTF8Console();  // <-- fixes garbled box-drawing chars on Windows
     std::cout << "====================================\n";
     std::cout << "     Packet Analyzer v1.0\n";
     std::cout << "====================================\n\n";
