@@ -307,7 +307,11 @@ Open terminal in VS Code (`Ctrl+``) and run:
 
 ## Troubleshooting
 
-### Error: 'g++' is not recognized
+##For utf8 change main() with 2 lines :
+1) enableUTF8Console();  // <-- fixes garbled box-drawing chars on Windows
+2) #include "platform.h"   // <-- UTF-8 fix for Windows console
+ 
+ ### Error: 'g++' is not recognized
 
 **Cause:** MinGW not installed or not in PATH
 
