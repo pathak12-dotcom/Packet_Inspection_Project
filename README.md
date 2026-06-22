@@ -1035,7 +1035,6 @@ python3 generate_test_pcap.py
 ## Summary
 
 This DPI engine demonstrates:
-
 1. **Network Protocol Parsing** - Understanding packet structure
 2. **Deep Packet Inspection** - Looking inside encrypted connections
 3. **Flow Tracking** - Managing stateful connections
